@@ -22,4 +22,6 @@ async def get_note_by_id(note_id: int):
         2: "Вторая заметка",
         3: "Третья заметка",
         }
-    return {"data": data[note_id]}
+    return {"data": {
+        "id": note_id, "text": data[note_id]
+        }}
